@@ -1,6 +1,11 @@
-# Project Title
+# How to user spring profile and Externalized Configuration
 
 One Paragraph of project description goes here
+
+## Reference
+```
+https://geeks-mexico.com/2017/10/30/support-multiple-profiles-with-spring-boot/
+```
 
 ## Getting Started
 
