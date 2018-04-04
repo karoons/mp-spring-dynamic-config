@@ -5,6 +5,7 @@
  */
 package com.service.mp.spring.dynamic.config.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,9 +20,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/project")
 public class ProjectStatus {
 
+    @Value("${custom.application.name}")
+    private String appName;
+
     @RequestMapping(value = "/your/ok", method = RequestMethod.GET, produces = "application/json;charset=utf-8")
     @ResponseStatus(HttpStatus.OK)
     public Object currentStatus() throws Exception {
-        return "I'm ok";
+        return appName + " is ok ^^";
     }
 }
